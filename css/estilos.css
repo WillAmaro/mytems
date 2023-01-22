@@ -1772,12 +1772,14 @@ video{
     margin-bottom: 20PX;
     }
     .boxi .cotiza{
-        width: 100px;
-        margin:0px;
+        width: 150px;
+        margin:auto;
+
     }
     .boxis{
-        width: 100px;
-        margin: 0px;
+        width: 150px;
+        margin: auto;
+        margin-bottom: 20px;
     }
     .boxis h1{
         font-size: 0.5rem;
