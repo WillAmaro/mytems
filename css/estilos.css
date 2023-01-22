@@ -401,8 +401,7 @@ background-color: #18191a;
     padding: 10px;
     overflow: hidden;
     border-radius: 20px;
-         background-image: url("../images/a\ \(4\).webp");
-        background-size: cover;
+   
         display: flex; 
         flex-wrap: wrap; 
           
@@ -487,12 +486,56 @@ background-color: #18191a;
     background: rgba(0,0,0,0.75);
     border-radius: 20px;
     display: flex;
+    margin: 0px auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
+.boxi{
+    position:relative;
+    width: 58.5%;
+    height: 325px;
+    background: rgba(0,0,0,0.75);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+}
+.boxis{
+    position:relative;
+    width:200px;
+    height: 35px;
+    background: rgba(0,0,0,0.75);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+}
+.boxis::after{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(transparent,transparent,transparent,#d400d4);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;    
+}
 
+ .boxis::before{
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: conic-gradient(transparent,transparent,transparent,#00ccff);
+    animation: animate 4s linear infinite;    
+}
  .box::after{
     content: '';
     position: absolute;
@@ -512,6 +555,25 @@ background-color: #18191a;
     animation: animate 4s linear infinite;    
 }
 
+.boxi::after{
+    content: '';
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    background: linear-gradient(transparent,transparent,transparent,#d400d4);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;    
+}
+
+
+ .boxi::before{
+    content: '';
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    background: conic-gradient(transparent,transparent,transparent,#00ccff);
+    animation: animate 4s linear infinite;    
+}
 @keyframes animate {
     0%{
         transform: rotate(0deg);
@@ -521,6 +583,15 @@ background-color: #18191a;
         transform:rotate(360deg);
     }
 }
+video{
+    z-index: 2;
+    width: 60%;
+    border-radius: 50px;
+    padding-left: 0px;
+    margin: 15px;
+    border-radius: 10px;
+
+}
 .box span{
     position: absolute;
     inset:5px;
@@ -528,7 +599,42 @@ background-color: #18191a;
     background-color: #0c1022;
     z-index:1;
 }
-
+.boxis span{
+    position: absolute;
+    inset:2px;
+    border-radius: 10px;
+    background-color:#d400d4;
+    z-index:1;
+}
+.boxis h1{
+    font-size: 0.65rem;
+    position: absolute;
+    inset:2px;
+    border-radius: 10px;
+    background-color: black;
+    z-index:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div{
+    gap: 2em;
+    height: 100%;
+    width: 100%;
+    inset: 5px;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.boxi>span{
+    position: absolute;
+    inset:5px;
+    border-radius: 15px;
+    background-color: black;
+    z-index:1;
+}
 .box .imag{
     display: flex;
     z-index:2;
@@ -537,10 +643,41 @@ background-color: #18191a;
     border-radius: 10px;
     margin-bottom:10px;
 }
+.boxi .imag{
+    display: flex;
+    z-index:6;
+    width: 70%;
+    height: 190px;
+    border-radius: 10px;
+    margin:20px
+}
+.boxi h4{
+    z-index:3;
+    color: white;
+    width: 90%;
+    margin: 0px auto 0px;
+}
+
 .box h4{
     z-index:3;
     color: white;
     width: 90%;
+}
+.boxi .cotiza{
+    z-index:3;
+    display: flex;
+    background-color: rgb(0, 255, 179);
+    border-radius: 10px;
+    margin: 0px auto 0px;
+    padding: 2px;
+    align-items: center;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    text-align: center;
+    justify-content: center;
+
 }
 .box .cotiza{
     z-index:3;
@@ -551,6 +688,12 @@ background-color: #18191a;
     padding: 2px;
     align-items: center;
     margin-bottom: 10px;
+  
+}.boxi a{
+    z-index:4;
+    color: white;
+    list-style: none;
+    text-decoration: none;
 }
 .box a{
     z-index:4;
@@ -558,11 +701,24 @@ background-color: #18191a;
     list-style: none;
     text-decoration: none;
 }
+.boxi>.div>.cotiza>a>h1{
+    text-decoration: none;
+    list-style: none;
+    font-size: 0.8rem;
+    color: black;
+    text-align: center;
+}
 .box>.cotiza>a>h1{
     text-decoration: none;
     list-style: none;
     font-size: 0.8rem;
     color: black;
+}
+.boxi>.div>a>h1{
+    text-decoration: none;
+    list-style: none;
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 .box>a>h1{
@@ -1028,9 +1184,97 @@ padding: 10px;
    color: black;
    letter-spacing: 1px;
 }
-@media(max-width:900px){
 
-       
+@media(max-width:1200px){
+    .boxi {
+        position: relative;
+        width: 58.5%;
+        height: 325px;
+        background: rgba(0,0,0,0.75);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin: auto;
+    }
+}
+
+
+@media(max-width:1080px){
+    .boxi {
+        position: relative;
+        width: 72%;
+        height: 325px;
+        background: rgba(0,0,0,0.75);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin: auto;
+    }
+}
+
+
+
+
+@media(max-width:900px){
+.boxi{
+    position: relative;
+    width: 58.5%;
+    height: 325px;
+    background: rgba(0,0,0,0.75);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 10px;}
+
+    .boxis {
+        position: relative;
+        width: 150px;
+        height: 30px;
+        background: rgba(0,0,0,0.75);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .boxi .cotiza {
+        z-index: 3;
+        display: flex;
+        background-color: rgb(0, 255, 179);
+        border-radius: 10px;
+        margin: 0px auto 0px;
+        padding: 2px;
+        align-items: center;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        width: 150px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .boxi>.div>.cotiza>a>h1 {
+        text-decoration: none;
+        list-style: none;
+        font-size: .6rem;
+        color: black;
+        text-align: center;
+    }
+
+
     .box {
         margin: 0 auto;
         position: relative;
@@ -1270,9 +1514,46 @@ padding: 10px;
         align-items: center;
         overflow: hidden;
     }
+.boxi h4{
+    font-size: .6rem;
+}
+video{
+    z-index: 2;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    /* padding-top: 30px; */
+    border-radius: 50px;
+    /* padding-left: 0px; */
+    height: 100%;
+    border-radius: 10%; 
+}
+.boxi{
+    position: relative;
+    width: 58.5%;
+    height: auto;
+    background: rgba(0,0,0,0.75);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.div{
+    gap: .5em;
+}
 
-
-
+.boxi h4 {
+    z-index: 3;
+    color: white;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 1rem;
+}
 
     .complemento{
         width: 190px;
@@ -1469,15 +1750,41 @@ padding: 10px;
 }
 
 @media(max-width:600px){
+
+    .boxi{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .boxi h4 {
+        z-index: 3;
+        color: white;
+        width: 80%;
+        margin:0px;
+        margin: auto;
+        font-size: 0.9rem;
+    }
     .box{
         width: 190px;
     margin: 0 auto;
     height: 300px;
     align-items: center;
-    margin-bottom: 10PX;
+    margin-bottom: 20PX;
     }
- 
-    
+    .boxi .cotiza{
+        width: 100px;
+        margin:0px;
+    }
+    .boxis{
+        width: 100px;
+        margin: 0px;
+    }
+    .boxis h1{
+        font-size: 0.5rem;
+    }
+    .boxi>.div>.cotiza>a>h1{
+        font-size: .5rem;
+    }
     .galera .cards .complemento h1{
         font-size: .8rem;
         margin: auto;
@@ -1629,8 +1936,28 @@ padding: 10px;
 
 
  @media (max-width:450px){
+    .boxi .cotiza{
+    width: 150px; 
+    margin: auto;
+    }
+    .boxi h4 {
+        font-size: .7rem;
+    }
+    .boxis{
+        width: 150px;
+        margin: auto;
+        margin-bottom: 20px;    }
+    .boxi .imag {
+        display: flex;
+        z-index: 6;
+        width: 70%;
+        height: 190px;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 0px;
+    }
     .box{
-    width: 155px;
+    width: 150px;
     margin: 0 auto;
     height: 290px;
     align-items: center;
@@ -1716,6 +2043,22 @@ padding: 10px;
     }
 
     @media (max-width: 370px) {
+    
+        .boxi .imag{
+            width: 60%;
+        }
+        .boxi h4{
+            font-size: .6rem;
+        }
+        .boxi .cotiza{
+            width: 150px;
+        }
+        .boxis{
+            width: 150px;
+        }
+        .boxi>.div>.cotiza>a>h1 {
+            font-size: .4rem;
+        }
         .box{
             margin-bottom: 20px;
         }
